@@ -1,0 +1,24 @@
+_______________________________________
+18.04.2016 16:12:55 {"jsonrpc":"2.0","id":0,"result":{"dogovor_code":"P1700036","pay_date":"19.04.2016 00:00:00 +03:00","price":{"RUB":3435,"USD":49,"EUR":44,"BYR":1015000}}}
+_______________________________________
+18.04.2016 16:12:55 from redis
+_______________________________________
+18.04.2016 16:12:54 бронь отеля ve_26160_ve_134729_10_USD
+_______________________________________
+18.04.2016 16:12:54 in get hotels
+_______________________________________
+18.04.2016 16:12:53 Data Source=192.168.1.89; Initial Catalog=avalon; User Id=sa; Password=MasterTop10; Application Name=; Max Pool Size=100;Asynchronous Processing=False; Connection Timeout=100
+_______________________________________
+18.04.2016 16:12:53 {"method":"create_new_dogovor","id":0,"params":[[1087],{"email":"booking@topbelarus.com","phone":"375297456321"},"",""]}
+_______________________________________
+18.04.2016 15:59:19 {"jsonrpc":"2.0","id":0,"result":{"dogovor_code":"P1700035","pay_date":"19.04.2016 00:00:00 +03:00","price":{"RUB":3435,"USD":49,"EUR":44,"BYR":1015000}}}
+_______________________________________
+18.04.2016 15:59:19 from redis
+_______________________________________
+18.04.2016 15:59:18 бронь отеля ve_26160_ve_134729_10_USD
+_______________________________________
+18.04.2016 15:59:18 in get hotels
+_______________________________________
+18.04.2016 15:59:17 Data Source=192.168.1.89; Initial Catalog=avalon; User Id=sa; Password=MasterTop10; Application Name=; Max Pool Size=100;Asynchronous Processing=False; Connection Timeout=100
+_______________________________________
+18.04.2016 15:59:16 {"method":"create_new_dogovor","id":0,"params":[[1086],{"email":"asfsfasdfasffffdsdf@gmail.com","phone":"6546546548797"},"",""]}

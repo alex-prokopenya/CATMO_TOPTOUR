@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Code/MiddleOffice.asmx.cs">
+      <publishTime>09/23/2016 14:50:44</publishTime>
+    </File>
+    <File Include="bin/Jayrock.dll">
+      <publishTime>08/10/2013 11:22:21</publishTime>
+    </File>
+    <File Include="bin/Jayrock.Json.dll">
+      <publishTime>06/24/2013 12:46:12</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>08/09/2015 17:01:04</publishTime>
+    </File>
+    <File Include="bin/Megatec.Common.BusinessRules.dll">
+      <publishTime>08/09/2015 17:01:08</publishTime>
+    </File>
+    <File Include="bin/Megatec.Common.dll">
+      <publishTime>08/09/2015 17:01:08</publishTime>
+    </File>
+    <File Include="bin/Megatec.Common.Model.dll">
+      <publishTime>08/09/2015 17:01:08</publishTime>
+    </File>
+    <File Include="bin/Megatec.Connection.dll">
+      <publishTime>12/23/2015 19:57:21</publishTime>
+    </File>
+    <File Include="bin/Megatec.Localizer.dll">
+      <publishTime>08/09/2015 17:05:50</publishTime>
+    </File>
+    <File Include="bin/Megatec.MasterTour.BusinessRules.dll">
+      <publishTime>08/09/2015 17:05:54</publishTime>
+    </File>
+    <File Include="bin/Megatec.MasterTour.DataAccess.dll">
+      <publishTime>08/09/2015 17:01:08</publishTime>
+    </File>
+    <File Include="bin/Megatec.MasterTour.Model.dll">
+      <publishTime>08/09/2015 17:05:50</publishTime>
+    </File>
+    <File Include="bin/Megatec.MasterTour.Types.dll">
+      <publishTime>08/09/2015 17:05:50</publishTime>
+    </File>
+    <File Include="bin/Sider.dll">
+      <publishTime>10/28/2013 14:12:58</publishTime>
+    </File>
+    <File Include="bin/TopTourMiddleOffice.dll">
+      <publishTime>09/23/2016 15:24:07</publishTime>
+    </File>
+    <File Include="json_handler.ashx">
+      <publishTime>08/09/2016 12:47:52</publishTime>
+    </File>
+    <File Include="MiddleOffice.asmx">
+      <publishTime>10/29/2013 14:41:58</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/23/2016 15:24:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+_______________________________________
+11.04.2016 19:52:38 {"jsonrpc":"2.0","id":0,"error":{"code":-32016,"message":"Invalid book_ids length","data":null}}
+_______________________________________
+11.04.2016 19:52:38 {"method":"create_new_dogovor","id":0,"params":[[],{"email":"svetlana.ksv@mail.ru","phone":"375293712271"},"",""]}
+_______________________________________
+11.04.2016 13:08:47 {"jsonrpc":"2.0","id":0,"result":{"dogovor_code":"P1700033","pay_date":"12.04.2016 00:00:00 +03:00","price":{"RUB":8681,"USD":123,"EUR":109,"BYR":2520000}}}
+_______________________________________
+11.04.2016 13:08:47 from redis
+_______________________________________
+11.04.2016 13:08:46 бронь отеля ve_24519_ve_111663_4_BYR
+_______________________________________
+11.04.2016 13:08:46 in get hotels
+_______________________________________
+11.04.2016 13:08:45 Data Source=192.168.1.89; Initial Catalog=avalon; User Id=sa; Password=MasterTop10; Application Name=; Max Pool Size=100;Asynchronous Processing=False; Connection Timeout=100
+_______________________________________
+11.04.2016 13:08:45 {"method":"create_new_dogovor","id":0,"params":[[1084],{"email":"elena060991@mail.ru","phone":"375445023002"},"",""]}

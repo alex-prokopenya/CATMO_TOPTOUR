@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+  </configSections>
+  <log4net>
+    <appender name="AgreementsReservationImport" type="Megatec.MasterTour.Plugins.ImportManager.HistoryFileAppender">
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <encoding value="utf-8" />
+      <rollingStyle value="Date" />
+      <datePattern value="yyyy.MM.dd'-ManualEurotoursReservationImport.log.txt'" />
+      <appendToFile value="true" />
+      <staticLogFileName value="false" />
+      <maximumFileSize value="10240KB" />
+      <file value="Logs\\Import\\" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%date{dd.MM.yyyy HH:mm} %-5level: %message %newline %exception" />
+      </layout>
+    </appender>
+    <appender name="AgreementsReservationAuto" type="Megatec.MasterTour.Plugins.ImportManager.HistoryFileAppender">
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <encoding value="utf-8" />
+      <rollingStyle value="Date" />
+      <datePattern value="yyyy.MM.dd'-AutoEurotoursReservationImport.log.txt'" />
+      <appendToFile value="true" />
+      <staticLogFileName value="false" />
+      <maximumFileSize value="10240KB" />
+      <file value="Logs\\Import\\" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%date{dd.MM.yyyy HH:mm} %-5level: %message %newline %exception" />
+      </layout>
+    </appender>
+    <appender name="AgreementsReservationExternal" type="Megatec.MasterTour.Plugins.ImportManager.HistoryFileAppender">
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <encoding value="utf-8" />
+      <rollingStyle value="Date" />
+      <datePattern value="yyyy.MM.dd'-ExternalEurotoursReservationLoader.log.txt'" />
+      <appendToFile value="true" />
+      <staticLogFileName value="false" />
+      <maximumFileSize value="10240KB" />
+      <file value="Logs\\Import\\" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%date{dd.MM.yyyy HH:mm} %-5level: %message %newline %exception" />
+      </layout>
+    </appender>
+    <appender name="ImportSendMail" type="log4net.Appender.SMTPAppender">
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <encoding value="utf-8" />
+      <BufferSize value="2"/>
+      <authentication value="Basic" />
+      <to value="" />
+      <from value="" />
+      <username value="" />
+      <password value="" />
+      <subject value="INFO" />
+      <smtpHost value="" />
+      <port value="25" />
+      <lossy value="true" />
+      <evaluator type="log4net.Core.LevelEvaluator">
+        <threshold value="INFO" />
+      </evaluator>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%newline%date [%thread] %-5level %logger %newline %message%newline%newline%newline" />
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL" />
+    </root>
+    <logger name="AgreementsReservationImport">
+      <level value="ALL" />
+      <appender-ref ref="AgreementsReservationImport" />
+      <!--   <appender-ref ref="ImportSendMail" />  -->
+    </logger>
+    <logger name="AgreementsReservationAuto">
+      <level value="ALL" />
+      <appender-ref ref="AgreementsReservationAuto" />
+      <!--   <appender-ref ref="ImportSendMail" />  -->
+    </logger>
+    <logger name="AgreementsReservationExternal">
+      <level value="ALL" />
+      <appender-ref ref="AgreementsReservationExternal" />
+      <!--   <appender-ref ref="ImportSendMail" />  -->
+    </logger>
+  </log4net>
+</configuration>

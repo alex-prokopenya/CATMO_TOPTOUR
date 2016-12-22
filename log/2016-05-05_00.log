@@ -1,0 +1,224 @@
+_______________________________________
+05.05.2016 16:26:42 {"id":1,"method":"get_dogovors_by_user","params":{"user_mail":"strigo@artgroup.by","user_id":7882}}
+_______________________________________
+05.05.2016 14:10:48 {"jsonrpc":"2.0","error":{"code":-32000,"message":"redis get string exception","data":[{"name":"Exception","message":"redis get string exception"}]},"id":1}
+_______________________________________
+05.05.2016 14:10:48 redis get string exception TopTourMiddleOffice    в TopTourMiddleOffice.Store.RedisHelper.GetString(String key) в D:\Мастеры\CATMO_top\Store\RedisHelper.cs:строка 80
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetCourses(String[] iso_codes, String base_rate, DateTime date) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 354
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 308
+_______________________________________
+05.05.2016 14:07:06 80.94.229.42,14333
+_______________________________________
+05.05.2016 14:07:06 True
+_______________________________________
+05.05.2016 14:07:06 Data Source=80.94.229.42,14333; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 14:07:06 {"id":1,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 14:05:28 {"jsonrpc":"2.0","result":null,"id":3}
+_______________________________________
+05.05.2016 14:05:28 {"id":3,"method":"get_dogovor_info","params":{"dogovor_code":"123213123"}}
+_______________________________________
+05.05.2016 14:05:21 {"jsonrpc":"2.0","error":{"code":-32012,"message":"Invalid dogovor_code","data":null},"id":2}
+_______________________________________
+05.05.2016 14:05:21 {"id":2,"method":"get_dogovor_info","params":{"dogovor_code":"123"}}
+_______________________________________
+05.05.2016 14:05:13 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Значение не может быть неопределенным.\r\nИмя параметра: input","data":[{"name":"ArgumentNullException","message":"Значение не может быть неопределенным.\r\nИмя параметра: input"}]},"id":1}
+_______________________________________
+05.05.2016 14:05:13 {"id":1,"method":"get_dogovor_info","params":{"dogovor_code":null}}
+_______________________________________
+05.05.2016 13:44:42 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Значение не может быть неопределенным.\r\nИмя параметра: input","data":[{"name":"ArgumentNullException","message":"Значение не может быть неопределенным.\r\nИмя параметра: input"}]},"id":1}
+_______________________________________
+05.05.2016 13:44:42 test
+_______________________________________
+05.05.2016 13:44:42 {"id":1,"method":"add_service","params":{"dogovor_code":null,"book_id":null}}
+_______________________________________
+05.05.2016 13:40:41 {"jsonrpc":"2.0","error":{"code":-32012,"message":"Invalid dogovor_code","data":null},"id":4}
+_______________________________________
+05.05.2016 13:40:41 {"id":4,"method":"get_dogovor_info","params":{"dogovor_code":"123"}}
+_______________________________________
+05.05.2016 13:36:53 {"jsonrpc":"2.0","result":[2016,5,5,13,36,53],"id":3}
+_______________________________________
+05.05.2016 13:36:53 {"id":3,"method":"get_server_time","params":{}}
+_______________________________________
+05.05.2016 13:36:47 {"jsonrpc":"2.0","error":{"code":-32000,"message":"redis get string exception","data":[{"name":"Exception","message":"redis get string exception"}]},"id":2}
+_______________________________________
+05.05.2016 13:36:47 redis get string exception TopTourMiddleOffice    в TopTourMiddleOffice.Store.RedisHelper.GetString(String key) в D:\Мастеры\CATMO_top\Store\RedisHelper.cs:строка 80
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetCourses(String[] iso_codes, String base_rate, DateTime date) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 354
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 311
+_______________________________________
+05.05.2016 13:33:16 80.94.229.42,14333
+_______________________________________
+05.05.2016 13:33:16 True
+_______________________________________
+05.05.2016 13:33:16 Data Source=80.94.229.42,14333; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:33:16 {"id":2,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:30:07 {"jsonrpc":"2.0","error":{"code":-32000,"message":"redis get string exception","data":[{"name":"Exception","message":"redis get string exception"}]},"id":1}
+_______________________________________
+05.05.2016 13:30:07 redis get string exception TopTourMiddleOffice    в TopTourMiddleOffice.Store.RedisHelper.GetString(String key) в D:\Мастеры\CATMO_top\Store\RedisHelper.cs:строка 80
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetCourses(String[] iso_codes, String base_rate, DateTime date) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 354
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 311
+_______________________________________
+05.05.2016 13:26:33 80.94.229.42,14333
+_______________________________________
+05.05.2016 13:26:33 True
+_______________________________________
+05.05.2016 13:26:33 Data Source=80.94.229.42,14333; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:26:33 {"id":1,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:22:49 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Удаленный компьютер отклонил это сетевое подключение","data":[{"name":"SqlException","message":"При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: TCP Provider, error: 0 - Удаленный компьютер отклонил это сетевое подключение.)"},{"name":"Win32Exception","message":"Удаленный компьютер отклонил это сетевое подключение"}]},"id":1}
+_______________________________________
+05.05.2016 13:22:49 При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: TCP Provider, error: 0 - Удаленный компьютер отклонил это сетевое подключение.) .Net SqlClient Data Provider    в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Megatec.Common.DataAccess.Manager.Fill(BaseDataTable dataTable, String selectQuery)
+   в Megatec.Common.BusinessRules.Base.DataContainer.Fill(BaseDataTable dataTable, String filter, String sort, Boolean isCached)
+   в Megatec.Common.BusinessRules.Base.BaseDataView.Fill()
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1243
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:21:08 93.125.39.126,14333
+_______________________________________
+05.05.2016 13:21:08 True
+_______________________________________
+05.05.2016 13:21:08 Data Source=93.125.39.126,14333; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:21:08 {"id":1,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:18:35 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не найден сетевой путь","data":[{"name":"SqlException","message":"При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server)"},{"name":"Win32Exception","message":"Не найден сетевой путь"}]},"id":5}
+_______________________________________
+05.05.2016 13:18:35 При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) .Net SqlClient Data Provider    в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Megatec.Common.DataAccess.Manager.Fill(BaseDataTable dataTable, String selectQuery)
+   в Megatec.Common.BusinessRules.Base.DataContainer.Fill(BaseDataTable dataTable, String filter, String sort, Boolean isCached)
+   в Megatec.Common.BusinessRules.Base.BaseDataView.Fill()
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1243
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:16:55 192.168.1.89
+_______________________________________
+05.05.2016 13:16:55 True
+_______________________________________
+05.05.2016 13:16:55 Data Source=192.168.1.89; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:16:55 {"id":5,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:13:23 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не найден сетевой путь","data":[{"name":"SqlException","message":"При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server)"},{"name":"Win32Exception","message":"Не найден сетевой путь"}]},"id":4}
+_______________________________________
+05.05.2016 13:13:23 При установлении соединения с SQL Server произошла ошибка, связанная с сетью или с определенным экземпляром. Сервер не найден или недоступен. Убедитесь, что имя экземпляра указано правильно и что на SQL Server разрешены удаленные соединения. (provider: Named Pipes Provider, error: 40 - Не удалось открыть подключение к SQL Server) .Net SqlClient Data Provider    в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в Megatec.Common.DataAccess.Manager.Fill(BaseDataTable dataTable, String selectQuery)
+   в Megatec.Common.BusinessRules.Base.DataContainer.Fill(BaseDataTable dataTable, String filter, String sort, Boolean isCached)
+   в Megatec.Common.BusinessRules.Base.BaseDataView.Fill()
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1243
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:11:43 192.168.1.89
+_______________________________________
+05.05.2016 13:11:43 True
+_______________________________________
+05.05.2016 13:11:43 Data Source=192.168.1.89; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:11:43 {"id":4,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:10:21 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не удалось загрузить файл или сборку \"Megatec.Localizer, Version=2.0.0.63600, Culture=neutral, PublicKeyToken=null\" либо одну из их зависимостей. Не удается найти указанный файл.","data":[{"name":"Exception","message":"Ошибка в  mappings файле Megatec.Common.BusinessRules.Mappings.REPORTLIST.mgc.xml"},{"name":"FileNotFoundException","message":"Не удалось загрузить файл или сборку \"Megatec.Localizer, Version=2.0.0.63600, Culture=neutral, PublicKeyToken=null\" либо одну из их зависимостей. Не удается найти указанный файл."}]},"id":3}
+_______________________________________
+05.05.2016 13:10:21 Ошибка в  mappings файле Megatec.Common.BusinessRules.Mappings.REPORTLIST.mgc.xml Megatec.Common.BusinessRules    в Megatec.Common.BusinessRules.Base.XmlMappingManager.AddAssembly(Assembly assembly)
+   в Megatec.Common.BusinessRules.Base.XmlMappingManager.get_Current()
+   в Megatec.MasterTour.BusinessRules.Dogovors..ctor(DataContainer dataContainer)
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1239
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:10:20 192.168.1.89
+_______________________________________
+05.05.2016 13:10:20 True
+_______________________________________
+05.05.2016 13:10:20 Data Source=192.168.1.89; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:10:20 {"id":3,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:08:54 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не удалось загрузить файл или сборку \"log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821\" либо одну из их зависимостей. Не удается найти указанный файл.","data":[{"name":"TypeInitializationException","message":"Инициализатор типа \"Megatec.Common.BusinessRules.Base.DataContainer\" выдал исключение."},{"name":"FileNotFoundException","message":"Не удалось загрузить файл или сборку \"log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821\" либо одну из их зависимостей. Не удается найти указанный файл."}]},"id":2}
+_______________________________________
+05.05.2016 13:08:54 Инициализатор типа "Megatec.Common.BusinessRules.Base.DataContainer" выдал исключение. Megatec.Common.BusinessRules    в Megatec.Common.BusinessRules.Base.DataContainer..ctor()
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1238
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:08:54 192.168.1.89
+_______________________________________
+05.05.2016 13:08:54 True
+_______________________________________
+05.05.2016 13:08:54 Data Source=192.168.1.89; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:08:54 {"id":2,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 13:08:54 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не удалось загрузить файл или сборку \"log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821\" либо одну из их зависимостей. Не удается найти указанный файл.","data":[{"name":"TypeInitializationException","message":"Инициализатор типа \"Megatec.Common.BusinessRules.Base.DataContainer\" выдал исключение."},{"name":"FileNotFoundException","message":"Не удалось загрузить файл или сборку \"log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821\" либо одну из их зависимостей. Не удается найти указанный файл."}]},"id":1}
+_______________________________________
+05.05.2016 13:08:54 Инициализатор типа "Megatec.Common.BusinessRules.Base.DataContainer" выдал исключение. Megatec.Common.BusinessRules    в Megatec.Common.BusinessRules.Base.DataContainer..ctor()
+   в TopTourMiddleOffice.MasterTour.MtHelper.GetDogovor(String dg_code) в D:\Мастеры\CATMO_top\MasterTour\MtHelper.cs:строка 1238
+   в TopTourMiddleOffice.MiddleOffice.GetDogovorInfo(String dogovorCode) в d:\Мастеры\CATMO_top\App_Code\MiddleOffice.asmx.cs:строка 306
+_______________________________________
+05.05.2016 13:08:54 192.168.1.89
+_______________________________________
+05.05.2016 13:08:54 True
+_______________________________________
+05.05.2016 13:08:54 Data Source=192.168.1.89; Initial Catalog=avalon;User Id=sa;Password=MasterTop10
+_______________________________________
+05.05.2016 13:08:54 {"id":1,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 12:57:56 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Не удалось загрузить файл или сборку \"Megatec.MasterTour.Types, Version=9.2.20.64177, Culture=neutral, PublicKeyToken=null\" либо одну из их зависимостей. Не удается найти указанный файл.","data":[{"name":"FileNotFoundException","message":"Не удалось загрузить файл или сборку \"Megatec.MasterTour.Types, Version=9.2.20.64177, Culture=neutral, PublicKeyToken=null\" либо одну из их зависимостей. Не удается найти указанный файл."}]},"id":4}
+_______________________________________
+05.05.2016 12:57:56 {"id":4,"method":"get_dogovor_info","params":{"dogovor_code":"J16SPA071"}}
+_______________________________________
+05.05.2016 12:56:49 {"jsonrpc":"2.0","error":{"code":-32012,"message":"Invalid dogovor_code","data":null},"id":3}
+_______________________________________
+05.05.2016 12:56:49 {"id":3,"method":"get_dogovor_info","params":{"dogovor_code":"123"}}
+_______________________________________
+05.05.2016 12:55:38 {"jsonrpc":"2.0","error":{"code":-32000,"message":"Значение не может быть неопределенным.\r\nИмя параметра: input","data":[{"name":"ArgumentNullException","message":"Значение не может быть неопределенным.\r\nИмя параметра: input"}]},"id":2}
+_______________________________________
+05.05.2016 12:55:38 {"id":2,"method":"get_dogovor_info","params":{"dogovor_code":null}}
+_______________________________________
+05.05.2016 12:54:27 {"jsonrpc":"2.0","result":"Jayrock, 0.9.12915.0 (Debug build 0.9.11214.1056)\r\nCopyright (c) 2005, Atif Aziz. All rights reserved.\r\nFor more information, visit http://jayrock.berlios.de/\r\n","id":1}
+_______________________________________
+05.05.2016 12:54:27 {"id":1,"method":"system.about","params":{}}
+_______________________________________
+05.05.2016 09:05:23 {"jsonrpc":"2.0","id":2,"result":"Jayrock, 0.9.12915.0 (Debug build 0.9.11214.1056)\r\nCopyright (c) 2005, Atif Aziz. All rights reserved.\r\nFor more information, visit http://jayrock.berlios.de/\r\n"}
+_______________________________________
+05.05.2016 09:05:23 {"id":2,"method":"system.about","params":{}}
+_______________________________________
+05.05.2016 09:04:50 {"jsonrpc":"2.0","id":1,"error":{"code":-32000,"message":"Значение не может быть неопределенным.\r\nИмя параметра: input","data":[{"name":"ArgumentNullException","message":"Значение не может быть неопределенным.\r\nИмя параметра: input"}]}}
+_______________________________________
+05.05.2016 09:04:50 test
+_______________________________________
+05.05.2016 09:04:50 {"id":1,"method":"add_service","params":{"dogovor_code":null,"book_id":null}}

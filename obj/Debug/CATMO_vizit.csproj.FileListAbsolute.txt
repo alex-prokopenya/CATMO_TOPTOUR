@@ -1,0 +1,15 @@
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\bin\ClickAndTravelMiddleOffice.dll.config
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\bin\ClickAndTravelMiddleOffice.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\bin\ClickAndTravelMiddleOffice.pdb
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\bin\Sider.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\obj\Debug\CATMO_vizit.csprojResolveAssemblyReference.cache
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\obj\Debug\ClickAndTravelMiddleOffice.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickAndTravelSearchEngine\obj\Debug\ClickAndTravelMiddleOffice.pdb
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\ClickAndTravelMiddleOffice.dll.config
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\ClickAndTravelMiddleOffice.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\ClickAndTravelMiddleOffice.pdb
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\Sider.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\obj\Debug\ClickAndTravelMiddleOffice.dll
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\obj\Debug\ClickAndTravelMiddleOffice.pdb
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\Megatec.Common.BusinessRules.xml
+C:\Users\svs\Documents\Visual Studio 2013\Projects\CATMO_vizit\ClickMiddleOffice\bin\Megatec.Common.dll

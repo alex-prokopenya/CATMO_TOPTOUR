@@ -1,0 +1,17 @@
+D:\Мастеры\CATMO_top\bin\TopTourMiddleOffice.dll.config
+D:\Мастеры\CATMO_top\bin\TopTourMiddleOffice.dll
+D:\Мастеры\CATMO_top\bin\TopTourMiddleOffice.pdb
+D:\Мастеры\CATMO_top\obj\Release\TopTourMiddleOffice.dll
+D:\Мастеры\CATMO_top\obj\Release\TopTourMiddleOffice.pdb
+D:\Мастеры\CATMO_top\obj\Release\CATMO_top.csprojResolveAssemblyReference.cache
+D:\Мастеры\CATMO_top\bin\log4net.dll
+D:\Мастеры\CATMO_top\bin\Megatec.MasterTour.Types.dll
+D:\Мастеры\CATMO_top\bin\Megatec.Localizer.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\TopTourMiddleOffice.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\TopTourMiddleOffice.pdb
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\log4net.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\Megatec.MasterTour.Types.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\Megatec.Localizer.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\CATMO_top.csprojResolveAssemblyReference.cache
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\TopTourMiddleOffice.dll
+E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\TopTourMiddleOffice.pdb
