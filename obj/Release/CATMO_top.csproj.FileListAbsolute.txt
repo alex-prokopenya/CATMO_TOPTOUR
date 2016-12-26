@@ -15,3 +15,9 @@ E:\Подработка\22.09\ТОП-ТУР\CATMO_top\bin\Megatec.Localizer.dll
 E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\CATMO_top.csprojResolveAssemblyReference.cache
 E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\TopTourMiddleOffice.dll
 E:\Подработка\22.09\ТОП-ТУР\CATMO_top\obj\Release\TopTourMiddleOffice.pdb
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\bin\TopTourMiddleOffice.dll.config
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\bin\TopTourMiddleOffice.dll
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\bin\TopTourMiddleOffice.pdb
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\TopTourMiddleOffice.dll
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\TopTourMiddleOffice.pdb
+C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\CATMO_top.csprojResolveAssemblyReference.cache

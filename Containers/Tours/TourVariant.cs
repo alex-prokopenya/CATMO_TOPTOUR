@@ -10,12 +10,6 @@ namespace TopTourMiddleOffice.Containers.Tours
     public class TourVariant
     {
         private KeyValuePair<string, decimal>[] _prices;
-        [JsonIgnore]
-        public KeyValuePair<string, decimal>[] Prices
-        {
-            get { return _prices; }
-            set { _prices = value; }
-        }
 
         [JsonMemberName("price")]
         public JsonObject Price
@@ -24,29 +18,69 @@ namespace TopTourMiddleOffice.Containers.Tours
             {
                 JsonObject pr = new JsonObject();
 
-                foreach (KeyValuePair<string, decimal> val in _prices)
-                    pr.Add(val.Key, val.Value);
+                if (_prices != null)
+                    foreach (KeyValuePair<string, decimal> val in _prices)
+                        pr.Add(val.Key, val.Value);
 
                 return pr;
             }
-            set { }
+            set
+            {
+                List<KeyValuePair<string, decimal>> prices = new List<KeyValuePair<string, decimal>>();
+
+                JsonObject vl = value;
+                foreach (string name in vl.Names)
+                    prices.Add(new KeyValuePair<string, decimal>(name, Convert.ToDecimal(vl[name])));
+
+                _prices = prices.ToArray();
+            }
         }
 
-
-        private int _variantId;
-         [JsonMemberName("variant_id")]
-        public int VariantId
+        [JsonIgnore]
+        public KeyValuePair<string, decimal>[] Prices
         {
-            get { return _variantId; }
-            set { _variantId = value; }
+            get { return _prices; }
+            set { _prices = value; }
         }
 
-        private TourHotelRoom[] _hotelRooms;
-         [JsonMemberName("hotel_rooms")]
-        public TourHotelRoom[] HotelRooms
+        private string _date;
+        [JsonMemberName("date")]
+        public string Date
         {
-            get { return _hotelRooms; }
-            set { _hotelRooms = value; }
+            get { return _date; }
+            set { _date = value; }
+        }
+
+        private string _title;
+        [JsonMemberName("title")]
+        public string Title
+        {
+            get { return _title; }
+            set { _title = value; }
+        }
+
+        private int _provider_id;
+        [JsonMemberName("provider_id")]
+        public int ProviderId
+        {
+            get { return _provider_id; }
+            set { _provider_id = value; }
+        }
+
+        private string _service_id;
+        [JsonMemberName("service_id")]
+        public string ServiceId
+        {
+            get { return _service_id; }
+            set { _service_id = value; }
+        }
+
+        private string _info;
+        [JsonMemberName("info")]
+        public string Info
+        {
+            get { return _info; }
+            set { _info = value; }
         }
     }
 }

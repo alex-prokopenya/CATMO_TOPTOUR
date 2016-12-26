@@ -133,11 +133,8 @@
     <Compile Include="Containers\Hotels\RoomVariant.cs" />
     <Compile Include="Containers\Inurance\InsuranceVariant.cs" />
     <Compile Include="Containers\Photo.cs" />
-    <Compile Include="Containers\Tours\TourHotelRoom.cs" />
-    <Compile Include="Containers\Tours\TourRoute.cs" />
-    <Compile Include="Containers\Tours\TourDates.cs" />
+    <Compile Include="Containers\Tours\TourBooking.cs" />
     <Compile Include="Containers\Tours\TourVariant.cs" />
-    <Compile Include="Containers\Tours\TourVariantsGroup.cs" />
     <Compile Include="Containers\Transfers\TransferBooking.cs" />
     <Compile Include="Containers\Transfers\TransferDetails.cs" />
     <Compile Include="Containers\Transfers\TransferInfo.cs" />
@@ -199,10 +196,8 @@
     <Compile Include="Responses\ServiceSimpleInfo.cs" />
     <Compile Include="Responses\TuristContainer.cs" />
     <Compile Include="Responses\SegmentRule.cs" />
-    <Compile Include="Responses\TourHotelsResult.cs" />
     <Compile Include="Responses\TourInitSearchResult.cs" />
     <Compile Include="Responses\TourPenalties.cs" />
-    <Compile Include="Responses\TourRoutesResult.cs" />
     <Compile Include="Responses\TourSearchState.cs" />
     <Compile Include="Responses\TourService.cs" />
     <Compile Include="Responses\TourVerifyResult.cs" />

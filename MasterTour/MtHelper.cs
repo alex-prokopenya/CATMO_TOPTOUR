@@ -2,31 +2,27 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Web;
 
 using Megatec.MasterTour.BusinessRules;
 using Megatec.MasterTour.DataAccess;
-
-using System.Data.Sql;
 using System.Data.SqlClient;
 using TopTourMiddleOffice.Exceptions;
-using TopTourMiddleOffice.Responses;
 using TopTourMiddleOffice.Store;
 using TopTourMiddleOffice.Helpers;
 using TopTourMiddleOffice.ParamsContainers;
 using TopTourMiddleOffice.Containers.Hotels;
-using TopTourMiddleOffice.Containers.Excursions;
 using TopTourMiddleOffice.Containers.Transfers;
+using TravelSoftMiddleOffice.Containers.Excursion;
+using TopTourMiddleOffice.Containers.Tours;
+
 
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
 using Jayrock.Json.Conversion;
-using Jayrock.Json;
 using Megatec.Common.BusinessRules.Base;
-using TravelSoftMiddleOffice.Containers.Excursion;
-using TravelSoftMiddleOffice.ParamsContainers;
+
 
 
 namespace TopTourMiddleOffice.MasterTour
@@ -41,18 +37,16 @@ namespace TopTourMiddleOffice.MasterTour
 
     public class MtHelper
     {
+        private const int TOUR_SERVICE_KEY = 1160; //ТУРПАКЕТЫ
 
         #region PrivateFields rate_codes, rate_courses
 
         public static string[] rate_codes = new string[] { "RUB", "USD", "EUR", "BYN" };
 
-        private KeyValuePair<string, decimal>[] rate_courses;
-
         #endregion
 
         private static int serviceAnnulateStatusKey = 13; //ключ статуса аннулированной услуги
         private static int dogovorAnnulateStatusKey = 22; //ключ статуса аннулированной путевки
-        //private static string salt_key = "laypistrubezkoi"; //secretkey для подписи ссылки на документ
         private static string BaseRate = "BYN";
 
         private static int PacketKey(PacketType type)
@@ -115,8 +109,23 @@ namespace TopTourMiddleOffice.MasterTour
                         return new ServiceDetails { PacketKey = packetKey, PartnerKey = num5, Code = transferByName.Key, City = transferByName.CityKey, Country = transferByName.Country.Key, SubCode1 = num6, SubCode2 = 0 };
                     }
 
+                case TOUR_SERVICE_KEY:
+                    var tour = GetTourByName(title);
+
+                    return new ServiceDetails()
+                    {
+                        PacketKey = packetKey,
+                        PartnerKey = 0,
+                        Code = tour.Key,
+                        City = tour.CityKey,
+                        Country = tour.Country.Key,
+                        SubCode1 = 0,
+                        SubCode2 = 0
+                    };
+
+                    break;
+
                 case Service.Hotel:
-                    //2045_ve_2444_29
                     var hotelParts = variantCode.Split('_');
                     int hotelId = Convert.ToInt32(hotelParts[0]);
 
@@ -195,6 +204,36 @@ namespace TopTourMiddleOffice.MasterTour
             }
 
 
+        }
+
+        private static ServiceList GetTourByName(string title)
+        {
+            if (title.Length > 100)
+                title = title.Substring(100);
+
+            ServiceLists trs = new ServiceLists(new DataContainer());
+            trs.RowFilter = "sl_name = '" + title + "' and sl_ctkey = 630 and sl_svkey = " + TOUR_SERVICE_KEY;
+
+            trs.Fill();
+
+            if (trs.Count > 0)
+            {
+                Logger.WriteToLog("tour exists");
+                return trs[0];
+            }
+
+            Logger.WriteToLog("new tour added");
+
+            ServiceList newItem = trs.NewRow();
+            newItem.Name = title;
+            newItem.NameLat = title;
+            newItem.CityKey = 630;
+            newItem.ServiceKey = TOUR_SERVICE_KEY;
+            trs.Add(newItem);
+
+            trs.DataContainer.Update();
+
+            return newItem;
         }
 
         private static Transfert GetTransferByName(string title)
@@ -368,75 +407,7 @@ namespace TopTourMiddleOffice.MasterTour
 
             return res;
         }
-
-
-        // не используется
-        //public static Dogovor SaveNewDogovor(int[] bookIds, UserInfo userInfo, PacketType type)
-        //{
-        //    Dogovors dogs = new Dogovors(new Megatec.Common.BusinessRules.Base.DataContainer());
-        //    Dogovor dog = dogs.NewRow();
-        //    try
-        //    {
-        //        DupUsers dups = new DupUsers(new Megatec.Common.BusinessRules.Base.DataContainer());
-        //        dups.RowFilter = "us_id='" + AntiInject(userInfo.UserLogin) + "'";
-        //        dups.Fill();
-
-        //        List<TempService> tempServices = GetBookedServices(bookIds, type);
-        //        Rates rates = new Rates(new DataContainer())
-        //        {
-        //            RowFilter = "RA_ISOCode = '" + tempServices[0].Rate + "'"
-        //        };
-
-        //        dog.CountryKey = tempServices[0].Details.Country;// !!! ГОРОД ПЕРВОЙ УСЛУГИ
-        //        dog.CityKey = tempServices[0].Details.City;      // !!! СТРАНА ПЕРВОЙ УСЛУГИ
-        //        dog.TurDate = DateTime.Today.AddDays(380);
-        //        dog.NDays = 1;
-        //        dog.MainMenEMail = userInfo.Email;
-        //        dog.MainMenPhone = userInfo.Phone;
-        //        dog.TourKey = PacketKey(type);     //*NETTO for agents (SPO)
-        //        dog.PartnerKey = dups[0].PartnerKey;  //!!!!покупатель
-        //        dog.DupUserKey = dups[0].Key;  //!!!!
-
-        //        dog.CreatorKey = Convert.ToInt32(ConfigurationManager.AppSettings["CreatorKey"]);
-        //        dog.OwnerKey = dog.CreatorKey;
-        //        dog.RateCode = rates[0].Code;
-        //        dog.PaymentDate = DateTime.Now.AddMinutes(45);
-        //        dogs.Add(dog);
-
-        //        dogs.DataContainer.Update();
-
-        //        List<string> tempTuristsIds = new List<string>();
-
-        //        foreach (TempService tfl in tempServices)
-        //            tempTuristsIds.AddRange(tfl.Turists);
-
-        //        TempTurist[] tempTurists = GetTurists(tempTuristsIds.ToArray());
-
-        //        Dictionary<int, List<string>> serviceToTuristLink = SaveNewServices(dog.DogovorLists, tempServices); //возвращает ссылки на туристов
-        //        SaveNewTurists(dog, tempTurists, serviceToTuristLink);
-
-        //        dog.CalculateCost();
-        //        MyCalculateCost(dog);
-
-        //        dog.NMen = (short)dog.Turists.Count;
-        //        dog.DataContainer.Update();
-
-        //        SqlConnection conn = new SqlConnection(Manager.ConnectionString);
-        //        conn.Open();
-        //        SqlCommand com = conn.CreateCommand();
-        //        com.CommandText = "update tbl_dogovor set dg_creator=" + Convert.ToInt32(ConfigurationManager.AppSettings["CreatorKey"]) + ", dg_owner=" + 100130 + ", dg_filialkey = (select top 1 us_prkey from userlist where us_key = " + 100130 + ") where dg_code='" + dog.Code + "'";
-        //        com.ExecuteNonQuery();
-        //        conn.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Logger.WriteToLog(ex.Message + " " + ex.StackTrace);
-        //        throw ex;
-        //    }
-
-        //    return dog;
-        //}
-
+                
         public static Dogovor SaveNewDogovor(int[] bookIds, UserInfo userInfo, string login, PacketType type)
         {
             Logger.WriteToLog(Manager.ConnectionString);
@@ -510,6 +481,7 @@ namespace TopTourMiddleOffice.MasterTour
             List<TempService> tempServices = GetHotels(bookIds, type);
             tempServices.AddRange(GetTransfers(bookIds, type));
             tempServices.AddRange(GetExcursions(bookIds));
+            tempServices.AddRange(GetTours(bookIds, type));
             return tempServices;
         }
 
@@ -819,63 +791,6 @@ namespace TopTourMiddleOffice.MasterTour
             services.DataContainer.Update();
         }
 
-        public static List<TempService> GetFlights(int[] bookIds)
-        {
-            try
-            {
-                var partnerKeys = new Dictionary<string,int>();
-                partnerKeys.Add("aw_", 7965);
-                partnerKeys.Add("tk_", 9215);
-                partnerKeys.Add("pb_", 8797);
-                partnerKeys.Add("vt_", 7993);
-
-                string ids = string.Join(",", bookIds);
-
-                //получить список сообщений
-                SqlConnection con = new SqlConnection(Manager.ConnectionString);
-                con.Open();
-
-                SqlCommand com = new SqlCommand(String.Format("select book_id,[ft_id],[ft_ticketid],[ft_route],[ft_date],[ft_price],[ft_turists] from [CATSE_Flights], [CATSE_book_id] where [ft_id] = service_id and book_id in(" + ids + ") and service_type='CATSE_Flights'"), con);
-
-                SqlDataReader reader = com.ExecuteReader();
-
-                List<TempService> tempList = new List<TempService>();
-
-                while (reader.Read())
-                {
-                    string bookTurists = reader["ft_turists"].ToString();
-
-                    string route = Convert.ToString(reader["ft_route"]).Trim();
-
-                    string ticketId = reader["ft_ticketid"].ToString().Trim();
-
-                    if (ticketId.Contains("@@@"))
-                        ticketId = ticketId.Substring(0, ticketId.IndexOf("@@@"));
-
-                    tempList.Add(new TempService()
-                    {
-                        Date = Convert.ToDateTime(reader["ft_date"]),
-                        Id = Convert.ToInt32(reader["book_id"]),
-                        Name = ticketId + "/" + route,
-                        Price = Convert.ToInt32(reader["ft_price"]),
-                        Turists = bookTurists.Split(','),
-                        NDays = 0,
-                        PartnerKey = partnerKeys[reader["ft_ticketid"].ToString().Substring(0,3)], // подставить партнера
-                        ServiceClass = 1118
-                    });
-                }
-                reader.Close();
-                con.Close();
-
-                return tempList;
-            }
-            catch (Exception ex)
-            {
-                Logger.WriteToLog(ex.Message + " " + ex.StackTrace);
-                throw ex;
-            }
-        }
-
         public static List<TempService> GetHotels(int[] bookIds, PacketType type) //выгружаем отели
         {
             var prefixToKey = new Dictionary<string, int>();
@@ -986,6 +901,58 @@ namespace TopTourMiddleOffice.MasterTour
                     });
 
                     //Logger.WriteToLog("бронь экскурсии прошла успешно");
+                }
+
+                return tempList;
+            }
+            catch (Exception ex)
+            {
+                Logger.WriteToLog(ex.Message + " " + ex.StackTrace);
+                throw ex;
+            }
+        }
+
+        public static List<TempService> GetTours(int[] bookIds, PacketType type) //выгружаем туры
+        {
+            var prefixToKey = new Dictionary<string, int>();
+
+            try
+            {
+                Logger.WriteToLog("in get tour");
+
+                string ids = string.Join(",", bookIds);
+
+                //получить список сообщений
+                SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings.Get("connectionString"));
+                con.Open();
+
+                SqlCommand com = new SqlCommand(String.Format("select book_id, tl_hash from [CATSE_tours], [CATSE_book_id] where [tl_id] = service_id and book_id in(" + ids + ") and service_type='CATSE_tours'"), con);
+
+                SqlDataReader reader = com.ExecuteReader();
+
+                List<TempService> tempList = new List<TempService>();
+
+                while (reader.Read())
+                {
+                    string hash = reader["tl_hash"].ToString();
+                    var trBook = JsonConvert.Import<TourBooking>(hash);
+
+                    int bookId = Convert.ToInt32(reader["book_id"]);
+
+                    tempList.Add(new TempService()
+                    {
+                        Details = GetServiceDetails(TOUR_SERVICE_KEY, trBook.TourVariant.ServiceId, DateTime.MinValue, type, trBook.TourVariant.Title),
+                        Date = Convert.ToDateTime(trBook.TourVariant.Date),
+                        Name = "Тур:://" + trBook.TourVariant.Title + " " + trBook.TourVariant.Info,
+                        Id = bookId,
+                        NDays = 1,
+                        PartnerKey = 1,
+                        ServiceClass = TOUR_SERVICE_KEY, //проставить ТУР
+                        Rate = trBook.TourVariant.Prices[0].Key,
+                        Price = Math.Round(Convert.ToDouble(trBook.TourVariant.Prices[0].Value), 2),
+                        Turists = string.Join(",", trBook.Turists).Split(','),
+                        Comment = trBook.TourVariant.Info
+                    });
                 }
 
                 return tempList;
