@@ -4,12 +4,15 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+*.config
+
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
 # Windows Installer files
 *.cab
+
 *.msi
 *.msm
 *.msp
