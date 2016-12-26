@@ -20,4 +20,3 @@ C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\bin\TopTourMiddleOffice.dll
 C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\bin\TopTourMiddleOffice.pdb
 C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\TopTourMiddleOffice.dll
 C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\TopTourMiddleOffice.pdb
-C:\Users\alex\Documents\GitHub\CATMO_TOPTOUR\obj\Release\CATMO_top.csprojResolveAssemblyReference.cache

@@ -515,12 +515,7 @@ namespace TopTourMiddleOffice.MasterTour
                 tst.DogovorKey = dogovor.Key;                //ключ путевки
                 tst.PostIndex = iTst.Id;
 
-
                 tst.Citizen = iTst.Citizen;
-                //if (iTst.Citizen.Length > 2)
-                //    tst.Citizen = iTst.Citizen.Substring(2, 2);          //код гражданства туриста
-                //else
-                //    tst.Citizen = iTst.Citizen;
 
                 if (iTst.Gender == 1)                  //пол туриста
                 {
@@ -624,7 +619,7 @@ namespace TopTourMiddleOffice.MasterTour
                 dl.PacketKey  = srvc.Details.PacketKey;                  //пакет
                 dl.CreatorKey = dl.Dogovor.CreatorKey;              //копируем ключ создателя
                 dl.OwnerKey   = dl.Dogovor.OwnerKey;                  //копируем ключ создателя
-                //dl.DateBegin = System.Convert.ToDateTime(srvc.date);     //ставим дату начала услуги
+
                 dl.PartnerKey = srvc.Details.PartnerKey;                    //ставим поставщика услуги
                 dl.CountryKey = srvc.Details.Country;      //копируем страну
                 dl.CityKey = srvc.Details.City;            //копируем город
@@ -633,12 +628,13 @@ namespace TopTourMiddleOffice.MasterTour
                 dl.Comment = srvc.Id.ToString();
 
                 dl.BuildName();
-                dl.CalculateCost(dl.NDays, date, dl.NDays);               
+
+                if (dl.ServiceKey != TOUR_SERVICE_KEY)
+                    dl.CalculateCost(dl.NDays, date, dl.NDays);               
 
                 dl.Brutto = srvc.Price;//ставим брутто
                 dl.FormulaBrutto = ((dl.Brutto.ToString()).Contains(".") || (dl.Brutto.ToString()).Contains(",")) ? (dl.Brutto.ToString()).Replace(".", ",") : (dl.Brutto + ",00"); //копируем брутто в "formula"
     
-                //double netto = CalcNetto(dl.Brutto, dl.ServiceKey, srvc.PartnerKey); //расчет нетто //
                 dl.Netto = srvc.Netto;
                 dl.FormulaNetto = ((dl.Netto.ToString()).Contains(".") || (dl.Netto.ToString()).Contains(",")) ? (dl.Netto.ToString()).Replace(".", ",") : (dl.Netto + ",00"); //копируем брутто в "formula"
 				
